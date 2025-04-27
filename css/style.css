@@ -83,6 +83,12 @@ body {
     display: none; /*in mobile width do not show contact form*/
 }
 
+.contact-social {
+    display: none;
+}
+
+
+
     
 
 @media (min-width: 600px) and (max-width: 1024px) {
@@ -152,6 +158,10 @@ body {
         justify-content: flex-start;
         gap: 20px;
     }
+    .contact-social {
+        display: none;
+    }
+    
     
 }
 @media (min-width: 1025px) {
@@ -209,17 +219,32 @@ body {
     .message {
         display: none;
     }  
-    .contact-form {
-        display: block;
-        width: 728px;
-        height: 434px;
-        background-color: #ff6b44;
-        clip-path: polygon(0 0, 100% 1%, 100% 20%, 100% 100%, 63% 100%, 0 100%, 0 32%);
+    
+   .social-media
+    {
+        display: none;
+       
     }
-    .social-media {
-        width: 100%; /*take the whole screen width otherwise not moving*/
-        display: flex;
-        justify-content: flex-start;
+
+    
+    .contact-social {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
         gap: 20px;
     }
-}
+    .contact-form-container {
+        padding: 20px;
+        height: 200px;
+        background-color: #ff6b44;
+        border-radius: 8px;
+    }
+    .contact-social .social-media {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    }
+    .contact-social .social-media div:hover {
+        background-color: #ff6b44;
+    }
+}   
