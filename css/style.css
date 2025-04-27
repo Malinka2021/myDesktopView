@@ -243,7 +243,7 @@ body {
         gap: 20px;
     }
     .footer.grid-item {
-        display: inline-block;
+        display: block;
         text-transform: uppercase;
         color: rgb(27, 26, 26);
         font: roboto sans-serif;
