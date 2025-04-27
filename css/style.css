@@ -1,0 +1,205 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, auto);
+}
+.grid-item {           /*rules for all objects*/
+    display: grid;
+    border: 2px solid #070606;
+    align-items: center;
+    justify-items: center;
+}
+.menu {
+    display: grid;
+    grid-template-columns: repeat(2, 180px);   /*2colum- logo and hamb menu*/
+    grid-template-rows: repeat(1, auto);    /*1row*/
+}
+.logo{
+    width: 50px;
+    height: 50px;
+    background-color: #ff44a1;
+    clip-path: circle(50% at 50% 50%);
+    justify-self: start;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.hamburger-menu {
+    width: 50px;
+    height: 50px;
+    background-color: #ff44a1;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    justify-self: end;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.star {
+    background-color: #e1b3f6;
+    width: 300px;
+    height: 300px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+.main {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 20px;
+}
+.frame {
+    background-color: #44ff60;
+    width: 300px;
+    height: 300px;
+    clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
+}
+.bevel {
+    background-color: #44aaff;
+    width: 200px;
+    height: 200px;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}   
+.message {
+    background-color: #ff6b44;
+    width: 200px;
+    height: 200px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
+.social-media div {
+    display: inline-block;
+    background-color: #ff44a1;
+    width: 90px;
+    height: 90px;
+    clip-path: circle(50% at 50% 50%);
+}
+.page-menu {
+    display: none; /*in mobile width do not show page menu*/
+}
+.gallery {
+    display: none; /*in mobile width do not show gallery*/
+}
+.contact-form {
+    display: none; /*in mobile width do not show contact form*/
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    body{
+        background-color: #216d86;
+        color: #ffffff;
+    }
+    .container {
+        width: 100%;
+    }
+    .menu {
+        width: 100%;
+        grid-template-columns: 1fr 2fr; /*1colum- logo and 2 page menu*/
+    }
+    .hamburger-menu {
+        display: none;
+    }
+    .page-menu {
+        display: block;
+        list-style: none;
+        justify-self: end;
+        margin-right: 40px;
+    }
+    .page-menu li{
+        display: inline-block;
+        text-transform: uppercase;
+        color: rgb(27, 26, 26);
+        font: roboto sans-serif;
+        font-size: auto;
+    }
+    .star {
+        justify-self: start;
+    }
+    .frame {
+        display: none;
+    }
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        gap: 20px;
+    }
+    .gallery-image {
+        width: 299px;
+        height: 149px;
+        background-color: aqua;
+        clip-path: polygon(0 0, 100% 1%, 100% 20%, 100% 68%, 63% 99%, 0 100%, 0 32%);
+    }
+    .bevel {
+       width: 300px;
+       height: 210px;
+       margin-top: 20px;
+    }
+    .message {
+        display: none;
+    }
+    .contact-form {
+        display: block;
+        width: 728px;
+        height: 434px;
+        background-color: #ff6b44;
+        clip-path: polygon(0 0, 100% 1%, 100% 20%, 100% 100%, 63% 100%, 0 100%, 0 32%);
+    }
+    .social-media {
+        width: 100%; /*take the whole screen width otherwise not moving*/
+        display: flex;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+}
+@media (min-width: 1025px) {
+    body{
+        background-color: #f2f2a5;
+        color: #ffffff;
+    }
+    .container {
+        width: 100%;
+    }
+    .menu {
+        width: 100%;
+        grid-template-columns: 1fr 2fr; /*1colum- logo and 2 page menu*/
+    }
+    .hamburger-menu {
+        display: none;
+    }
+    .page-menu {
+        display: block;
+        list-style: none;
+        justify-self: end;
+        margin-right: 20px;
+    }
+    .page-menu li{
+        display: inline-block;
+        text-transform: uppercase;
+        color: rgb(27, 26, 26);
+        font: roboto sans-serif;
+        font-size: auto;
+    }
+    .star {
+        justify-self: start;
+    }
+    .frame {
+        display: none;
+    }
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 20px;
+    }
+    .gallery-image {
+        width: 387px;
+        height: 201px;
+        background-color: aqua;
+        clip-path: polygon(0 0, 100% 1%, 100% 20%, 100% 68%, 63% 99%, 0 100%, 0 32%);
+    }
+}
+    .bevel {
+        width: 618px;
+        height: 220px;
+        margin-top: 20px;
+    }
